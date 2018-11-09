@@ -1,0 +1,6 @@
+```scss
+$namespace: 'rp';
+$element-separator: '__';
+$modifier-separator: '--';
+$state-prefix: 'is-';
+```
