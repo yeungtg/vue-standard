@@ -8,9 +8,9 @@
 module.exports = {
   title: 'Vue standard - 代码规范',
   description: 'Vue-代码规范',
-  // head: [
-  //     ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `https://img1.rrcimg.com/dist/pc/images/favicon-60ac45c9.ico` }]
-  // ],
+  head: [
+      ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `https://assets-cdn.github.com/favicon.ico` }]
+  ],
   base: '/vue-standard/',
   host: '0.0.0.0',
   port: 8100,
