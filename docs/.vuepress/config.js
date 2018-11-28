@@ -12,7 +12,7 @@ module.exports = {
       ['link', { rel: 'shortcut icon', type: "image/x-icon", href: `https://assets-cdn.github.com/favicon.ico` }]
   ],
   base: '/vue-standard/',
-  host: '0.0.0.0',
+  host: '127.0.0.1',
   port: 8100,
   themeConfig: {
     sidebar: [

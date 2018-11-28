@@ -2,55 +2,80 @@
 #### views 文件夹下面是由 以页面为单位的 vue 文件 或者 模块文件夹 组成的，放在 src 目录之下，与 components、assets 同级。
   
 > <font size='3' color='#660000'>由名词组成如：`car order cart`</font>  
-- <font size='3' color='#dd0000'>单词只能有一个 </font>  
+- <font size='3' color='#dd0000'>单词最少有一个 </font>  
 - <font size='3' color='#dd0000'>尽量是名词 </font>  
-- <font size='3' color='#dd0000'>以小写开头 </font>  
+- <font size='3' color='#dd0000'>全部小写，已中划线分割 </font>  
 ```json
-good: "car order cart"  ✅  
-bad: "carInfo carpage"  ❎
+good: "car-info order-detail cart"  ✅  
+bad: "carInfo carpage"              ❎
 
-good: "car"             ✅  
-bad: "greet"            ❎
+good: "car"                         ✅  
+bad: "greet"                        ❎
 
-good: "car"             ✅  
-bad: "Car"              ❎
+good: "car"                         ✅  
+bad: "Car"                          ❎
 ```
 
 ## views vue文件 命名
 #### views vue 文件代表着页面的名字，放在模块文件夹之下
 
 > <font size='3' color='#660000'>尽量是名词</font>   
-> <font size='3' color='#660000'>大写开头，开头的单词就是所属模块名字：`CarDetail、CarEdit、CarList`</font> 
+> <font size='3' color='#660000'>全部小写，开头的单词就是所属模块名字：`car-detail、car-edit、car-list`</font> 
 1. <font size='3' color='#dd0000'>名字至少两个单词 </font>  
 ```json
-good: "CarDetail"                         ✅  
-bad: "CarPage Car"                        ❎ 
+good: "car-detail"                          ✅  
+bad: "CarPage Car"                          ❎ 
 ```
 2. <font size='3' color='#dd0000'>常用结尾单词有 </font> 
 ```json
-good: "Detail Edit List Info Report"      ✅
+good: "detail edit list info report"        ✅
 ``` 
 3. <font size='3' color='#dd0000'>以 Item 结尾的代表着组件 </font> 
 ```json
-good: "CarListItem CarInfoItem"           ✅  
+good: "car-list-item car-info-item"         ✅  
 ```
 
 ## Vue方法 顺序
 
 <ul style="background: #2c323b; color: #fff; list-style: none; padding: 10px; width: 97%; text-indent: 10px; border-radius: 5px;">
+  <li>el</li>
+  <li>name</li>
+  <li>parent</li>
+  <li>functional</li>
+  <li>[delimiters, comments]</li>
+  <li>[components, directives, filters]</li>
+  <li>extends</li>
+  <li>mixins</li>
+  <li>inheritAttrs</li>
+  <li>model</li>
+  <li>[props, propsData]</li>
+  <li>data</li>
+  <li>computed</li>
+  <li>watch</li>
+  <li style="color: red">LIFECYCLE_HOOKS</li>
+  <li>methods</li>
+  <li>[template, render]</li>
+  <li>renderError</li>
+  <li>name</li>
+  <li>minxs</li>
   <li>components</li>
-  <li style="color: #7ec699">props</li>
-  <li style="color: #7ec699">data</li>
-  <li style="color: #7ec699">created</li>
-  <li style="color: #7ec699">mounted</li>
-  <li>activited</li>
-  <li>update</li>
-  <li>beforeRouteUpdate</li>
-  <li style="color: #7ec699">metods</li>
-  <li>filter</li>
-  <li style="color: #7ec699">computed</li>
-  <li style="color: #7ec699">watch</li>
 </ul>
+
+```
+LIFECYCLE_HOOKS: [
+  'beforeCreate',
+  'created',
+  'beforeMount',
+  'mounted',
+  'beforeUpdate',
+  'updated',
+  'activated',
+  'deactivated',
+  'beforeDestroy',
+  'destroyed'
+]
+注：只有LIFECYCLE_HOOKS 在保存的时候顺序自动变化
+```
 
 ## Vue method自定义方法 命名
 1. <font size='3' color='#dd0000'>驼峰命名</font> 
@@ -68,7 +93,7 @@ bad: "go nextPage show open login"              ❎
 good: "getListData postFormData"                ✅
 bad: "takeData confirmData getList postForm"    ❎
 ```
-4. <font size='3' color='#dd0000'>事件方法以 `on` 开头</font> 
+4. <font size='3' color='#dd0000'>事件方法以 `on handle` 其中一种开头, 整个项目只能用一个</font> 
 ```json
 good: "onTypeChange onUsernameInput"            ✅
 
@@ -79,16 +104,16 @@ init refresh 单词除外
 - 不在 `mounted、created` 之类的方法写逻辑，取 `Ajax 数据`
 
 ## Vue组件 命名
-> <font size='3' color='#660000'>始终是多个单词的，根组件 App 除外 `TodoItem CarInfoItem`</font> 
-1. <font size='3' color='#dd0000'>首字母大写 驼峰命名</font>
+> <font size='3' color='#660000'>始终是多个单词的，根组件 App 除外 `todo-item car-info-item`</font> 
+1. <font size='3' color='#dd0000'>全部小写 已中划线分割</font>
   ```json
-  good: "TodoItem CarInfoItem"                ✅
-  bad: "todo-item todoItem todo-item"         ❎
+  good: "todo-item car-info-item"               ✅
+  bad: "todo-Item todoItem Todo-item"           ❎
   ``` 
 2. <font size='3' color='#dd0000'>名字至少两个单词</font> 
   ```json
-  good: "TodoItem CarInfoItem"                ✅
-  bad: "todo car info"                        ❎
+  good: "todo-item car-info-item"               ✅
+  bad: "todo car info"                          ❎
   ``` 
 
 ## 结构基础划分
@@ -98,30 +123,29 @@ init refresh 单词除外
    ├── assets
    │  
    ├── components
-   │   ├── SideBar
+   │   ├── side-bar
    │   │   ├── src
-   │   │   │   ├── SideBarIndex.vue
-   │   │   │   └── SideBarItem.vue
+   │   │   │   ├── index.vue
+   │   │   │   └── side-bar-item.vue
    │   │   └── index.js
-   │   └── TopBar
+   │   └── top-bar
    │       ├── src
-   │       │   └── TopBarIndex.vue
+   │       │   └── index.vue
    │       └── index.js
    │
-   └── view       
+   └── view
        ├── car                          
        │   ├── src
-       │   │   ├── CarDetail
+       │   │   ├── car-detail
        │   │   │   └── index.vue  
-       │   │   └── CarEdit
+       │   │   └── car-edit
        │   │       └── index.vue 
        │   └── index.js
-       └── order                          
+       └── payment-auth                          
            ├── src
-           │   ├── OrderDetail
+           │   ├── payment-detail
            │   │   └── index.vue  
-           │   └── OrderEdit
+           │   └── payment-verify
            │       └── index.vue 
            └── index.js
-       
 ```
