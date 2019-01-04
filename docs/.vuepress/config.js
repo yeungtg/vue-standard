@@ -33,5 +33,13 @@ module.exports = {
       { text: 'Vue', link: 'vueStarted' },
     
     ]
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/register-components',
+      {
+        componentsDir: './components'
+      }
+    ]
+  ]
 }

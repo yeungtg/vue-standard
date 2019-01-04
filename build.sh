@@ -14,7 +14,7 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m '修改'
+git commit -m '修复 #1'
 
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
