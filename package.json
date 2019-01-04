@@ -6,7 +6,10 @@
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "leancloud-storage": "^3.11.1",
+    "valine": "^1.3.4"
+  },
   "devDependencies": {
     "@qiaoba/ff": "^1.0.3",
     "vuepress": "^0.12.0"
