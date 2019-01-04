@@ -17,7 +17,9 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "start": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "cl:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "cl": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "author": "",
   "license": "ISC",
