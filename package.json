@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@qiaoba/ff": "^1.0.3",
     "vuepress": "^0.12.0"
   },
   "scripts": {
@@ -16,5 +17,24 @@
     "build": "vuepress build docs"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@qiaoba/ff/index.js"
+    },
+    "ghooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
 }
