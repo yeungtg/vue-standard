@@ -24,7 +24,7 @@ export default {
     if (typeof window !== 'undefined') {
       // document.getElementsByClassName('leancloud-visitors')[0].id = window.location.pathname
       this.window = window
-      // window.AV = require('leancloud-storage')
+      window.AV = require('leancloud-storage')
     }
 
     let a = new Valine({

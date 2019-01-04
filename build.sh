@@ -14,7 +14,7 @@ cd docs/.vuepress/dist
 
 git init
 git add -A
-git commit -m '修复 #1'
+git commit -m '增加评论功能'
 
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
